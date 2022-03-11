@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="skill">
+            <div class="outer">
+                <div class="inner">
+                    <div id="number">
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/sgv" version="1.1" width="160px" height="160px">
+                <defs>
+                    <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#e91e63" />
+                        <stop offset="100%" stop-color="#673ab7" />
+                    </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+        </div>
+
+    </div>
+    
+    <footer>
+        <p>Source: <a href="https://www.youtube.com/watch?v=mSfsGTIQlxg">Easy Tutorials</a></p>
+    </footer>
+
+    <script>
+
+        const percentage = 20;
+
+        const duration = 3 * percentage / 100
+        const offset = 472 - 472 * percentage
+
+        const number = document.getElementById("number");
+        let counter = 0;
+
+        const id = setInterval(() => {
+            if(counter >= percentage) {
+                clearInterval(id)
+            } else {
+                counter += 1;
+                number.innerHTML = counter + "%"
+            }
+        }, 30)
+
+    </script>
+
+</body>
+
+</html>
+
